@@ -1,4 +1,3 @@
-import pytesseract
 import cv2
 import copy
 import numpy as np
@@ -9,9 +8,6 @@ def show(img):
     cv2.imshow('Eorso', img)
     cv2.waitKey(72000)
     cv2.destroyAllWindows()
-
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract'
-tessdata_dir_config = '--tessdata-dir "C:\\Program Files (x86)\\Tesseract-OCR\\tessdata"'
 
 def find_outliers(data, m = 2):
     absdev = abs(data - np.median(data))
